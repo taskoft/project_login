@@ -1,0 +1,13 @@
+POST http://localhost:5000/login
+
+###
+
+POST http://localhost:5000/users/signup
+Content-Type: application/json
+
+{
+    "username":"faruk123",
+    "password":"3333",
+    "userType":"superAdminnnn",
+    "email":"faruk123@hotmail.com"
+}
