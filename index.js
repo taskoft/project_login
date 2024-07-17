@@ -1,3 +1,5 @@
+//refreshtoken bak
+
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
@@ -57,7 +59,7 @@ newUser.userType="admin";
 })*/
 
 
-app.post("/login", async (req, res) => {
+/*app.post("/login", async (req, res) => {
     const { username, password } = req.body;
     if (username !== newUser.username || password !== newUser.password)
         return res.status(401).json({ message: "Bilgiler uyuşmuyor." });
@@ -69,7 +71,7 @@ app.post("/login", async (req, res) => {
     refreshTokens.push(refreshToken);
     return res.status(200).json({ accessToken, refreshToken });
 
-})
+})*/
 
 app.post("/logout", async (req, res) => {
 console.log(refreshTokens);
@@ -109,7 +111,7 @@ const clients = [
 ]
 
 app.get("/clients", authMiddleware, async (req, res) => {
-    console.log(user);
+    
     res.json(clients);
 
 })

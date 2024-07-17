@@ -6,8 +6,19 @@ POST http://localhost:5000/users/signup
 Content-Type: application/json
 
 {
-    "username":"faruk123",
-    "password":"3333",
-    "userType":"superAdminnnn",
-    "email":"faruk123@hotmail.com"
+    "username":"faruk",
+    "password":"4444",
+    "userType":"superAdmin",
+    "email":"faruk1@hotmail.com"
+}
+
+###
+
+POST http://localhost:5000/users/signin
+Content-Type: application/json
+
+{
+    
+    "email":"faruk@hotmail.com",
+    "password":"4444"
 }
