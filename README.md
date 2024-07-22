@@ -1,4 +1,4 @@
-# express-jwt-mongo-generic-crud-rest-api
+# express-jwt-mongo-crud-rest-api
 
 An example REST API built on top of Express
 
@@ -6,48 +6,39 @@ An example REST API built on top of Express
 
 - RESTful routing
 - Generic CRUD Controller
-- Generic Routers
 - JWT Authentication
+- Authorization by user role
 
 ## Routes List:
 
 ### User
 
+http://localhost:5000/api/auth/
+
 | Method     | URI                               |
 |------------|-----------------------------------|
-| `POST`     | `signIn`                          | 
-| `POST`     | `signUp`                          | 
+| `POST`     | `signin`                          | 
+| `POST`     | `signup`                          | 
 
-### Customer
 
-| Method     | URI                               | 
+#
+
+http://localhost:5000/api/users/
+
+| Method     | URI                               |
 |------------|-----------------------------------|
-| `GET/HEAD` | `/`                               | 
-| `GET/HEAD` | `getById/{id}`                    | 
-| `GET/HEAD` | `getCount`                        | 
-| `POST`     | `/`                               |
-| `PUT`      | `/{id}`                           | 
-| `DELETE`   | `/{id}`                           | 
+| `PATCH`    | `update`                          | 
+| `DELETE`   | `delete`                          | 
+| `GET`      | `balance`                         | 
 
-### CustomerTransaction
 
-| Method     | URI                               | 
-|------------|-----------------------------------|
-| `GET/HEAD` | `/`                               | 
-| `GET/HEAD` | `getById/{id}`                    | 
-| `GET/HEAD` | `getCount`                        | 
-| `GET/HEAD` | `getTotalBalance/{id}`            | 
-| `POST`     | `/`                               |
-| `PUT`      | `/{id}`                           | 
-| `DELETE`   | `/{id}`                           |
+#
+For users balance 
+The query to list user balances provides different data depending on the user's role.
+And a "Bearer Token" is required for access to endpoint.
+(http://localhost:5000/api/users/balance)
 
-### CustomerGroup
 
-| Method     | URI                               | 
-|------------|-----------------------------------|
-| `GET/HEAD` | `/`                               | 
-| `GET/HEAD` | `getById/{id}`                    | 
-| `GET/HEAD` | `getCount`                        | 
-| `POST`     | `/`                               |
-| `PUT`      | `/{id}`                           | 
-| `DELETE`   | `/{id}`                           |
+
+
+
